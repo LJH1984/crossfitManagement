@@ -1,0 +1,90 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.crossfitmanagement</groupId> <!-- 프로젝트 그룹 ID -->
+    <artifactId>CrossFitManagement</artifactId> <!-- 프로젝트 이름 -->
+    <version>0.0.1-SNAPSHOT</version> <!-- 프로젝트 버전 -->
+    <packaging>jar</packaging> <!-- 프로젝트 출력 형식 -->
+
+    <name>CrossFitManagement</name> <!-- 프로젝트 이름 -->
+    <description>CrossFit Management System</description> <!-- 프로젝트 설명 -->
+
+    <properties>
+        <!-- Java 및 Spring Boot 버전 설정 -->
+        <java.version>17</java.version> <!-- Java 17 사용 -->
+        <spring-boot.version>3.0.5</spring-boot.version> <!-- Spring Boot 버전 -->
+    </properties>
+
+    <!-- 부모 프로젝트로 Spring Boot 사용 선언 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.0.5</version>
+        <relativePath /> <!-- 부모 프로젝트 위치 -->
+    </parent>
+
+    <dependencies>
+        <!-- Spring Boot Web: RESTful API를 제공하는 데 필요 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Data JPA: 데이터베이스 연동 (ORM) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- MariaDB JDBC Driver: MariaDB 연결 -->
+        <dependency>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Thymeleaf: 서버 사이드 HTML 렌더링 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!-- Lombok: getter, setter, toString 등을 자동 생성 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Spring Boot Test: 테스트 프레임워크 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JavaMail API -->
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Maven Compiler Plugin: Java 버전 지정 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

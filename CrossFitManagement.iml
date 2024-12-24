@@ -10,7 +10,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../javax.mail.jar!/" />
+          <root url="jar://$MODULE_DIR$/src/libs/javax.mail-api-1.6.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
